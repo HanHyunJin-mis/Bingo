@@ -30,13 +30,13 @@ function bingo_arr1(new_arr) {
     const body = document.querySelector(`.me_data${i}`);
     if (i % 3 === 0) {
       new_arr[0].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     } else if (i % 3 === 1) {
       new_arr[1].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     } else {
       new_arr[2].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     }
   }
   // console.log(new_arr);
@@ -116,9 +116,7 @@ $me_tbody.addEventListener('click', function (e) {
   let num = +e.target.textContent;
   // console.log(me_arr[0].indexOf(num));
 
-
-  e.target.style.display = inline;
-
+  e.target.querySelector('.circle').classList.add('display');
 
   // 플레이어 숫자 변경
   if (me_arr[0].indexOf(num) !== -1) {
