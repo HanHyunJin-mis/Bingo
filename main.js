@@ -13,8 +13,6 @@ let com_arr = [
   []
 ];
 
-
-
 function bingo_arr1(new_arr) {
   // 빙고 숫자 랜덤으로 생성
   const bingo_num = [];
@@ -44,6 +42,8 @@ function bingo_arr1(new_arr) {
   // console.log(new_arr);
   return new_arr;
 }
+
+
 
 function bingo_arr2(new_arr) {
   // 빙고 숫자 랜덤으로 생성
@@ -78,6 +78,12 @@ bingo_arr1(me_arr);
 bingo_arr2(com_arr);
 console.log(bingo_arr1(me_arr));
 console.log(bingo_arr2(com_arr));
+
+
+
+
+
+
 
 
 
