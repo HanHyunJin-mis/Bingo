@@ -30,13 +30,13 @@ function bingo_arr1(new_arr) {
     const body = document.querySelector(`.me_data${i}`);
     if (i % 3 === 0) {
       new_arr[0].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     } else if (i % 3 === 1) {
       new_arr[1].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     } else {
       new_arr[2].push(bingo_num[i]);
-      body.innerHTML = bingo_num[i];
+      body.innerHTML += bingo_num[i];
     }
   }
   // console.log(new_arr);

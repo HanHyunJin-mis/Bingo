@@ -162,6 +162,7 @@ tr {
   background: #fff;
   margin: 0;
   cursor: pointer;
+  position: relative;
 }
 
 
@@ -196,7 +197,35 @@ tr {
 
 .cat {
   position: absolute;
-  width: 150px;
-  left: 40px;
-  top: 20px;
+  width: 70%;
+  left: 15%;
+  top: 0px;
+}
+.lose{
+  display: none;
+  position: absolute;
+  width:100%;
+  z-index: 100;
+}
+.win{
+  display: none;
+  position: absolute;
+  width:100%;
+  z-index: 100;
+  top:15%;
+}
+.draw{
+  display:none;
+  position: absolute;
+  width:100%;
+  z-index: 100;
+  top:10%;
+}
+.circle{
+  display:none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
 }
