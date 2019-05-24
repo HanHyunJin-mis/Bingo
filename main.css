@@ -17,6 +17,49 @@ a {
 body{
   margin: 0;
 }
+tr{
+  font-size:0px;
+}
+@keyframes blink {
+  0% {
+    color: #9F6164;
+  }
+
+  25% {
+    color: #F8DEBD;
+  }
+
+  50% {
+    color: #FFAE5D;
+  }
+
+  75% {
+    color: #FF7182;
+  }
+
+  100% {
+    color: #6F3662;
+  }
+}
+
+/* for Chrome, Safari */
+@-webkit-keyframes blink {
+  0% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+}
+
+/* blink CSS 브라우저 별로 각각 애니메이션을 지정해 주어야 동작한다. */
+.blinkcss {
+  font-weight: 800;
+  animation: blink 2s step-end infinite;
+  -webkit-animation: blink 2s step-end infinite;
+  font-size: 40px;
+}
 /* 헤더 */
 .me_data1{
   /* width: 100px; */
@@ -24,11 +67,11 @@ body{
 .title{
   position:relative;
   height:20vh;
-  background: chocolate;
+  background: tan;
 }
 .Bingo_title{
   list-style-type:none;
-  background: pink;
+  /* background:; */
   align-items: center;
   display:flex;
   position: absolute;
@@ -36,24 +79,26 @@ body{
   width: 40vw;
   left: 30vw;
   height:100%;
+  font-weight:bolder;
+  font-size: 80px;
 }
 /*빙고판 메인*/
 .Bingo_board{
   position: relative;
   background: beige;
-  height:75vh;
+  height:80vh;
   display:flex;
 }
 .Bingo_board section{
   position: absolute;
-  background: yellow;
+  /* background: yellow; */
   width: 40vw;
   height: 65vh;
 }
-.board_divider{
+/* .board_divider{
   width: 50vw;
   height: 75vh;
-}
+} */
 .me_bingo{
   left:5vw;
   top: 5vh;
@@ -65,17 +110,40 @@ body{
 .bingo_table{
   width:90%;
   height: 90%;
-  background: green;
+  background: #000;
   position: absolute;
   left:5%;
-  border: 2px solid #000;
+  top:5%;
+  border: 1px solid #000;
+  /* font-size:0px; */
+  /* border-radius: 10px; */
+}
+.bingo_table caption {
+  position: absolute;
+  bottom: -20%;
+  left:35%;
+  font-size: 30px;
+  font-weight: bold;
+  /* background: pink; */
+  padding: 10px;
+  border-radius: 20px;
+  width: 10vw;
 }
 .data{
   font-siZe: 60px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   text-align: center;
+  border-radius: 0px;
+  background: #fff;
+  margin: 0;
 }
 /*푸터*/
 .bingo_footer{
   height:5vh;
+}
+.turn{
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height:100%;
+  width: 50%;
 }
