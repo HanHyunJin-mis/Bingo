@@ -68,11 +68,12 @@ body{
   background: green;
   position: absolute;
   left:5%;
-  border: 2px 
+  border: 2px solid #000;
 }
 .data{
   font-siZe: 60px;
-
+  border: 1px solid #000;
+  text-align: center;
 }
 /*푸터*/
 .bingo_footer{
