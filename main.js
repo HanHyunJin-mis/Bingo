@@ -183,7 +183,7 @@ $me_tbody.addEventListener('click', function (e) {
     if (me_arr[0].indexOf(random_num) !== -1) {
       let index = me_arr[0].indexOf(random_num);
       me_arr[0][index] = 'circle';
-      
+
     } else if (me_arr[1].indexOf(random_num) !== -1) {
       let index = me_arr[1].indexOf(random_num);
       me_arr[1][index] = 'circle';
@@ -287,5 +287,3 @@ function bingo(arr) {
 }
 
 // document.querySelector('.draw').style.display = 'inline');
-
-
