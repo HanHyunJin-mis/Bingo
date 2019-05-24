@@ -7,19 +7,24 @@
   border: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
-body{
+
+body {
   margin: 0;
 }
-tr{
-  font-size:0px;
+
+tr {
+  font-size: 0px;
 }
+
 @keyframes blink {
   0% {
     color: #9F6164;
@@ -60,76 +65,87 @@ tr{
   -webkit-animation: blink 2s step-end infinite;
   font-size: 40px;
 }
+
 /* 헤더 */
-.me_data1{
+.me_data1 {
   /* width: 100px; */
 }
-.title{
-  position:relative;
-  height:20vh;
+
+.title {
+  position: relative;
+  height: 20vh;
   background: tan;
 }
-.Bingo_title{
-  list-style-type:none;
+
+.Bingo_title {
+  list-style-type: none;
   /* background:; */
   align-items: center;
-  display:flex;
+  display: flex;
   position: absolute;
   justify-content: space-between;
   width: 40vw;
   left: 30vw;
-  height:100%;
-  font-weight:bolder;
+  height: 100%;
+  font-weight: bolder;
   font-size: 80px;
 }
+
 /*빙고판 메인*/
-.Bingo_board{
+.Bingo_board {
   position: relative;
   background: beige;
-  height:80vh;
-  display:flex;
+  height: 80vh;
+  display: flex;
 }
-.Bingo_board section{
+
+.Bingo_board section {
   position: absolute;
   /* background: yellow; */
   width: 40vw;
   height: 65vh;
 }
-.com_divider{
+
+.com_divider {
   position: relative;
   right: 0;
   top: 0;
-  width:50vw;
-}
-.me_divider{
-  position: relative;
-  left: 0;
-  top:0;
   width: 50vw;
 }
-.me_bingo{
-  left:5vw;
+
+.me_divider {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50vw;
+}
+
+.me_bingo {
+  left: 5vw;
   top: 5vh;
 }
-.com_bingo{
-  left:5vw;
-  top:5vh;
+
+.com_bingo {
+  left: 5vw;
+  top: 5vh;
 }
-.bingo_table{
-  width:90%;
+
+.bingo_table {
+  width: 90%;
   height: 90%;
   background: #000;
   position: absolute;
-  left:5%;
-  top:5%;
+  left: 5%;
+  top: 5%;
   border: 1px solid #000;
   /* font-size:0px; */
   /* border-radius: 10px; */
 }
+
 .bingo_table caption {
   position: absolute;
   bottom: -20%;
-  left:35%;
+  left: 35%;
   font-size: 30px;
   font-weight: bold;
   /* background: pink; */
@@ -137,7 +153,8 @@ tr{
   border-radius: 20px;
   width: 10vw;
 }
-.data{
+
+.data {
   font-siZe: 60px;
   /* border: 1px solid #000; */
   text-align: center;
@@ -145,14 +162,33 @@ tr{
   background: #fff;
   margin: 0;
 }
+
 /*푸터*/
-.bingo_footer{
-  height:5vh;
+.bingo_footer {
+  height: 5vh;
 }
-.turn{
+
+.turn {
   background: rgba(0, 0, 0, 0.1);
   z-index: 100;
   height: 80vh;
   width: 100%;
   position: absolute;
+}
+
+
+/* .com_bingo_tbody>tr>.data {
+  background: #fff url(/images/cat.png) no-repeat;
+  background-size: 150px;
+  background-position: 45%;
+} */
+.com_bingo_tbody>tr>.data {
+  position: relative;
+}
+
+.cat {
+  position: absolute;
+  width: 150px;
+  left: 40px;
+  top: 20px;
 }
