@@ -164,6 +164,7 @@ function bingo(arr) {
   bingo_right_diagonal(arr);
   return total_count;
 }
-// console.log(document.querySelector('.lose').style.display = 'inline');
+
+// document.querySelector('.draw').style.display = 'inline');
 
 
