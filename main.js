@@ -13,21 +13,20 @@ let com_arr = [
   []
 ];
 
-function doc() {
 
-}
-const bingo_num = [];
-while (bingo_num.length < 9) {
-  const num = parseInt((Math.random() * 9) + 1);
 
-  if (bingo_num.indexOf(num) === -1) {
-    bingo_num.push(num);
+function bingo_arr1(new_arr) {
+  // 빙고 숫자 랜덤으로 생성
+  const bingo_num = [];
+  while (bingo_num.length < 9) {
+    const num = parseInt((Math.random() * 9) + 1);
+
+    if (bingo_num.indexOf(num) === -1) {
+      bingo_num.push(num);
+    }
+    // if (n.length === 9) break;
   }
-  // if (n.length === 9) break;
-}
-console.log(bingo_num);
-
-function bingo_arr(new_arr) {
+  console.log(bingo_num);
   // 빙고판 숫자 html에 집어넣기
   for (let i = 0; i < bingo_num.length; i++) {
     const body = document.querySelector(`.me_data${i}`);
@@ -45,10 +44,40 @@ function bingo_arr(new_arr) {
   // console.log(new_arr);
   return new_arr;
 }
-bingo_arr(me_arr);
-bingo_arr(com_arr);
-console.log(bingo_arr(me_arr));
-console.log(bingo_arr(com_arr));
+
+function bingo_arr2(new_arr) {
+  // 빙고 숫자 랜덤으로 생성
+  const bingo_num = [];
+  while (bingo_num.length < 9) {
+    const num = parseInt((Math.random() * 9) + 1);
+
+    if (bingo_num.indexOf(num) === -1) {
+      bingo_num.push(num);
+    }
+    // if (n.length === 9) break;
+  }
+  console.log(bingo_num);
+  // 빙고판 숫자 html에 집어넣기
+  for (let i = 0; i < bingo_num.length; i++) {
+    const body = document.querySelector(`.com_data${i}`);
+    if (i % 3 === 0) {
+      new_arr[0].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
+    } else if (i % 3 === 1) {
+      new_arr[1].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
+    } else {
+      new_arr[2].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
+    }
+  }
+  // console.log(new_arr);
+  return new_arr;
+}
+bingo_arr1(me_arr);
+bingo_arr2(com_arr);
+console.log(bingo_arr1(me_arr));
+console.log(bingo_arr2(com_arr));
 
 
 
