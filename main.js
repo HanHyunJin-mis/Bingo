@@ -94,10 +94,53 @@ $com_tbody.addEventListener('click', function (e) {
 
 });
 
+function select_winner() {
+  //  우승자 구현
+  var me_score = bingo(me_arr);
+  var com_score = bingo(com_arr);
+  if (me_score >= 3 || com_arr >= 3) {
+    if (me_score > com_score) {
+      console.log('you win!!!!!!!!!');
+    } else if (me_score < com_score) {
+      console.log('computer win!!!!!!!');
+    } else {
+      console.log('Draw!!!!!!!');
+    }
+  }
+}
+
 // 플레이어 클릭
 $me_tbody.addEventListener('click', function (e) {
   console.log('me');
   console.log(e.target.textContent);
+  let num = +e.target.textContent;
+  // console.log(me_arr[0].indexOf(num));
+  if (me_arr[0].indexOf(num) !== -1) {
+    let index = me_arr[0].indexOf(num);
+    me_arr[0][index] = 'circle';
+  } else if (me_arr[1].indexOf(num) !== -1) {
+    let index = me_arr[1].indexOf(num);
+    me_arr[1][index] = 'circle';
+  } else {
+    let index = me_arr[2].indexOf(num);
+    me_arr[2][index] = 'circle';
+  }
+  console.log(me_arr);
+
+  // 컴퓨터 숫자 변경
+  if (com_arr[0].indexOf(num) !== -1) {
+    let index = com_arr[0].indexOf(num);
+    com_arr[0][index] = 'circle';
+  } else if (com_arr[1].indexOf(num) !== -1) {
+    let index = com_arr[1].indexOf(num);
+    com_arr[1][index] = 'circle';
+  } else {
+    let index = com_arr[2].indexOf(num);
+    com_arr[2][index] = 'circle';
+  }
+  console.log(com_arr);
+
+  select_winner();
 
 })
 
@@ -111,7 +154,7 @@ let total_count = 0;
 // 왼쪽 대각선
 const bingo_left_diagonal = function (arr) {
   let count = arr.every(function (item, index) {
-    return item[index] === 1;
+    return item[index] === 'circle';
   });
   if (count) return total_count += 1;
 }
@@ -120,7 +163,7 @@ const bingo_left_diagonal = function (arr) {
 const bingo_right_diagonal = function (arr) {
   let count = arr.every(function (item, index) {
     // console.log(item[item.length - index - 1]);
-    return item[item.length - index - 1] === 1;
+    return item[item.length - index - 1] === 'circle';
   });
   if (count) return total_count += 1;
 }
@@ -131,7 +174,7 @@ const bingo_column = function (arr) {
   let count = 0;
   arr.forEach(function (item) {
     count += item.every(function (item) {
-      return item === 1;
+      return item === 'circle';
     });
   });
   return total_count += count;
@@ -145,7 +188,7 @@ const bingo_row = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     let count = 0;
     for (let j = 0; j < arr[i].length; j++) {
-      if (arr[j][i] === 1) {
+      if (arr[j][i] === 'circle') {
         count += 1;
       }
     }
@@ -162,5 +205,6 @@ function bingo(arr) {
   bingo_column(arr);
   bingo_left_diagonal(arr);
   bingo_right_diagonal(arr);
+  console.log(total_count);
   return total_count;
 }
