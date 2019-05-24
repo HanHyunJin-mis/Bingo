@@ -25,42 +25,28 @@ function bingo_arr(new_arr) {
   }
   console.log(bingo_num);
 
+
+  // 빙고판 숫자 html에 집어넣기
   for (let i = 0; i < bingo_num.length; i++) {
+    const body = document.querySelector(`.me_data${i}`);
     if (i % 3 === 0) {
       new_arr[0].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
     } else if (i % 3 === 1) {
       new_arr[1].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
     } else {
       new_arr[2].push(bingo_num[i]);
+      body.innerHTML = bingo_num[i];
     }
   }
   // console.log(new_arr);
   return new_arr;
 }
-
+bingo_arr(me_arr);
+bingo_arr(com_arr);
 console.log(bingo_arr(me_arr));
 console.log(bingo_arr(com_arr));
-
-
-
-
-
-// 빙고판 숫자 html에 집어넣기
-for (let i = 0; i < 9; i++) {
-
-}
-const body = document.querySelector(`.me_data${i}`);
-console.log(arr);
-body.innerHTML = arr[0][0];
-
-
-
-
-
-
-
-
-
 
 
 
