@@ -117,6 +117,22 @@ $me_tbody.addEventListener('click', function (e) {
   // console.log(me_arr[0].indexOf(num));
 
   e.target.querySelector('.circle').classList.add('display');
+  // .querySelector('.circle').classList.add('display');
+
+
+  if (me_arr[0].indexOf(num) !== -1) {
+    let index = me_arr[0].indexOf(num);
+    me_arr[0][index] = 'circle';
+  } else if (me_arr[1].indexOf(num) !== -1) {
+    let index = me_arr[1].indexOf(num);
+    me_arr[1][index] = 'circle';
+  } else {
+    let index = me_arr[2].indexOf(num);
+    me_arr[2][index] = 'circle';
+  }
+  console.log(me_arr);
+
+
 
   // 플레이어 숫자 변경
   if (me_arr[0].indexOf(num) !== -1) {
@@ -150,6 +166,15 @@ $me_tbody.addEventListener('click', function (e) {
   // 컴퓨터로 차례 넘어가기
   setTimeout(function () {
     let random_num = parseInt((Math.random() * 9) + 1);
+
+    document.querySelectorAll('.data').forEach(function (elem) {
+      console.log(elem);
+      if (elem.textContent === `${random_num}`) {
+        elem.firstElementChild.classList.add('display');
+      }
+    })
+
+
     // 플레이어 숫자 변경
     if (me_arr[0].indexOf(random_num) !== -1) {
       let index = me_arr[0].indexOf(random_num);
@@ -175,6 +200,8 @@ $me_tbody.addEventListener('click', function (e) {
       com_arr[2][index] = 'circle';
     }
     console.log(com_arr);
+
+
 
     select_winner();
     document.querySelector('.me_turn').classList.remove('turn');
