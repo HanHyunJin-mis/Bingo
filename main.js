@@ -13,19 +13,21 @@ let com_arr = [
   []
 ];
 
-function bingo_arr(new_arr) {
-  const bingo_num = [];
-  while (bingo_num.length < 9) {
-    const num = parseInt((Math.random() * 9) + 1);
+function doc() {
 
-    if (bingo_num.indexOf(num) === -1) {
-      bingo_num.push(num);
-    }
-    // if (n.length === 9) break;
+}
+const bingo_num = [];
+while (bingo_num.length < 9) {
+  const num = parseInt((Math.random() * 9) + 1);
+
+  if (bingo_num.indexOf(num) === -1) {
+    bingo_num.push(num);
   }
-  console.log(bingo_num);
+  // if (n.length === 9) break;
+}
+console.log(bingo_num);
 
-
+function bingo_arr(new_arr) {
   // 빙고판 숫자 html에 집어넣기
   for (let i = 0; i < bingo_num.length; i++) {
     const body = document.querySelector(`.me_data${i}`);
