@@ -100,11 +100,15 @@ function select_winner() {
   var com_score = bingo(com_arr);
   if (me_score >= 3 || com_arr >= 3) {
     if (me_score > com_score) {
-      console.log('you win!!!!!!!!!');
+      console.log('youwin!!!')
+      document.querySelector('.me_win').style.display = "inline";
+      document.querySelector('.com_lose').style.display = "inline";
     } else if (me_score < com_score) {
-      console.log('computer win!!!!!!!');
+      document.querySelector('.me_lose').style.display = "inline";
+      document.querySelector('.com_win').style.display = "inline";
     } else {
-      console.log('Draw!!!!!!!');
+      document.querySelector('.me_draw').style.display = "inline";
+      document.querySelector('.com_draw').style.display = "inline";
     }
   }
 }
@@ -179,6 +183,7 @@ $me_tbody.addEventListener('click', function (e) {
     if (me_arr[0].indexOf(random_num) !== -1) {
       let index = me_arr[0].indexOf(random_num);
       me_arr[0][index] = 'circle';
+      
     } else if (me_arr[1].indexOf(random_num) !== -1) {
       let index = me_arr[1].indexOf(random_num);
       me_arr[1][index] = 'circle';
@@ -280,3 +285,7 @@ function bingo(arr) {
   console.log(total_count);
   return total_count;
 }
+
+// document.querySelector('.draw').style.display = 'inline');
+
+
