@@ -74,14 +74,12 @@ function bingo_arr2(new_arr) {
   // console.log(new_arr);
   return new_arr;
 }
-bingo_arr1(me_arr);
-bingo_arr2(com_arr);
+// bingo_arr1(me_arr);
+// bingo_arr2(com_arr);
 console.log(bingo_arr1(me_arr));
 console.log(bingo_arr2(com_arr));
 
-
-
-
+// 클릭 시 값 읽어오기
 
 
 
