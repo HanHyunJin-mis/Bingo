@@ -1,0 +1,80 @@
+/*초기화 셋*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body{
+  margin: 0;
+}
+/* 헤더 */
+.me_data1{
+  /* width: 100px; */
+}
+.title{
+  position:relative;
+  height:20vh;
+  background: chocolate;
+}
+.Bingo_title{
+  list-style-type:none;
+  background: pink;
+  align-items: center;
+  display:flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 40vw;
+  left: 30vw;
+  height:100%;
+}
+/*빙고판 메인*/
+.Bingo_board{
+  position: relative;
+  background: beige;
+  height:75vh;
+  display:flex;
+}
+.Bingo_board section{
+  position: absolute;
+  background: yellow;
+  width: 40vw;
+  height: 65vh;
+}
+.board_divider{
+  width: 50vw;
+  height: 75vh;
+}
+.me_bingo{
+  left:5vw;
+  top: 5vh;
+}
+.com_bingo{
+  right:5vw;
+  top:5vh;
+}
+.bingo_table{
+  width:90%;
+  height: 90%;
+  background: green;
+  position: absolute;
+  left:5%;
+  border: 2px 
+}
+.data{
+  font-siZe: 60px;
+
+}
+/*푸터*/
+.bingo_footer{
+  height:5vh;
+}
